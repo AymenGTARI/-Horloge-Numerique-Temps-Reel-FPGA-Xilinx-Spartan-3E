@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Asus-Pc\Desktop\vhdl\versioncorrige\horloge_complete.ncd
+OUTFILE=C:\Users\Asus-Pc\Desktop\vhdl\versioncorrige\horloge_complete.bit
+FAMILY=Spartan3E
+PART=xc3s100e-5tq144
+WORKINGDIR=C:\Users\Asus-Pc\Desktop\vhdl\versioncorrige
+LICENSE=WebPack
+USER_INFO=__0_0_0

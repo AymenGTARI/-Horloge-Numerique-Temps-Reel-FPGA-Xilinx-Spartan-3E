@@ -1,0 +1,5 @@
+vhdl work "clk_div_vga.vhd"
+vhdl work "affichage_vga.vhd"
+vhdl work "../../version_corrige_vhdl/div.vhd"
+vhdl work "../../version_corrige_vhdl/bloc2.vhd"
+vhdl work "../../version_corrige_vhdl/horloge_complete.vhd"

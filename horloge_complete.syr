@@ -1,0 +1,626 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Reading design: horloge_complete.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "horloge_complete.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "horloge_complete"
+Output Format                      : NGC
+Target Device                      : xc3s100e-5-tq144
+
+---- Source Options
+Top Module Name                    : horloge_complete
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Asus-Pc/Desktop/vhdl/versioncorrige/clk_div_vga.vhd" in Library work.
+Architecture behav of Entity clk_div_vga is up to date.
+Compiling vhdl file "C:/Users/Asus-Pc/Desktop/version_corrige_vhdl/div.vhd" in Library work.
+Architecture behav of Entity div is up to date.
+Compiling vhdl file "C:/Users/Asus-Pc/Desktop/version_corrige_vhdl/bloc2.vhd" in Library work.
+Architecture behavioral of Entity bloc2 is up to date.
+Compiling vhdl file "C:/Users/Asus-Pc/Desktop/vhdl/versioncorrige/affichage_vga.vhd" in Library work.
+Architecture behavioral of Entity vga_affichage is up to date.
+Compiling vhdl file "C:/Users/Asus-Pc/Desktop/version_corrige_vhdl/horloge_complete.vhd" in Library work.
+Architecture structural of Entity horloge_complete is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <horloge_complete> in library <work> (architecture <structural>).
+
+Analyzing hierarchy for entity <clk_div_vga> in library <work> (architecture <behav>).
+
+Analyzing hierarchy for entity <div> in library <work> (architecture <behav>).
+
+Analyzing hierarchy for entity <bloc2> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <vga_affichage> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <horloge_complete> in library <work> (Architecture <structural>).
+Entity <horloge_complete> analyzed. Unit <horloge_complete> generated.
+
+Analyzing Entity <clk_div_vga> in library <work> (Architecture <behav>).
+Entity <clk_div_vga> analyzed. Unit <clk_div_vga> generated.
+
+Analyzing Entity <div> in library <work> (Architecture <behav>).
+Entity <div> analyzed. Unit <div> generated.
+
+Analyzing Entity <bloc2> in library <work> (Architecture <behavioral>).
+Entity <bloc2> analyzed. Unit <bloc2> generated.
+
+Analyzing Entity <vga_affichage> in library <work> (Architecture <behavioral>).
+WARNING:Xst:790 - "C:/Users/Asus-Pc/Desktop/vhdl/versioncorrige/affichage_vga.vhd" line 199: Index value(s) does not match array range, simulation mismatch.
+Entity <vga_affichage> analyzed. Unit <vga_affichage> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <clk_div_vga>.
+    Related source file is "C:/Users/Asus-Pc/Desktop/vhdl/versioncorrige/clk_div_vga.vhd".
+    Found 1-bit register for signal <toggle>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <clk_div_vga> synthesized.
+
+
+Synthesizing Unit <div>.
+    Related source file is "C:/Users/Asus-Pc/Desktop/version_corrige_vhdl/div.vhd".
+    Found 26-bit up counter for signal <count_sec>.
+    Found 1-bit register for signal <led_reg>.
+    Found 1-bit register for signal <tick>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   2 D-type flip-flop(s).
+Unit <div> synthesized.
+
+
+Synthesizing Unit <bloc2>.
+    Related source file is "C:/Users/Asus-Pc/Desktop/version_corrige_vhdl/bloc2.vhd".
+    Found 1-bit register for signal <btn_h_down_d>.
+    Found 1-bit register for signal <btn_h_up_d>.
+    Found 1-bit register for signal <btn_min_down_d>.
+    Found 1-bit register for signal <btn_min_up_d>.
+    Found 5-bit register for signal <h>.
+    Found 5-bit adder for signal <h$addsub0000> created at line 89.
+    Found 5-bit subtractor for signal <h$addsub0001> created at line 74.
+    Found 6-bit register for signal <m>.
+    Found 6-bit adder for signal <m$addsub0000> created at line 93.
+    Found 6-bit subtractor for signal <m$addsub0001> created at line 58.
+    Found 6-bit up counter for signal <sec>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  15 D-type flip-flop(s).
+	inferred   4 Adder/Subtractor(s).
+Unit <bloc2> synthesized.
+
+
+Synthesizing Unit <vga_affichage>.
+    Related source file is "C:/Users/Asus-Pc/Desktop/vhdl/versioncorrige/affichage_vga.vhd".
+WARNING:Xst:646 - Signal <row> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <fy> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <fx> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <font_id> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cy_u> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cx_u> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <char_no> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 16x9-bit ROM for signal <font_id$rom0000>.
+    Found 8-bit 16-to-1 multiplexer for signal <$mux0009> created at line 199.
+    Found 10-bit subtractor for signal <cx$sub0000> created at line 182.
+    Found 10-bit subtractor for signal <cy$sub0000> created at line 183.
+    Found 10-bit up counter for signal <h_cnt>.
+    Found 5-bit comparator greatequal for signal <hd$cmp_ge0000> created at line 118.
+    Found 5-bit comparator greatequal for signal <hd$cmp_ge0001> created at line 118.
+    Found 10-bit comparator greatequal for signal <hsync$cmp_ge0000> created at line 155.
+    Found 10-bit comparator less for signal <hsync$cmp_lt0000> created at line 155.
+    Found 4-bit subtractor for signal <hu$share0000> created at line 118.
+    Found 6-bit comparator greatequal for signal <md$cmp_ge0000> created at line 126.
+    Found 6-bit comparator greatequal for signal <md$cmp_ge0001> created at line 126.
+    Found 6-bit comparator greatequal for signal <md$cmp_ge0002> created at line 127.
+    Found 6-bit comparator greatequal for signal <md$cmp_ge0003> created at line 128.
+    Found 6-bit comparator greatequal for signal <md$cmp_ge0004> created at line 129.
+    Found 4-bit subtractor for signal <mu$share0000> created at line 126.
+    Found 12-bit comparator greatequal for signal <on_text$cmp_ge0000> created at line 184.
+    Found 11-bit comparator greatequal for signal <on_text$cmp_ge0001> created at line 184.
+    Found 12-bit comparator less for signal <on_text$cmp_lt0000> created at line 184.
+    Found 11-bit comparator less for signal <on_text$cmp_lt0001> created at line 184.
+    Found 10-bit up counter for signal <v_cnt>.
+    Found 10-bit comparator less for signal <visible$cmp_lt0000> created at line 160.
+    Found 10-bit comparator less for signal <visible$cmp_lt0001> created at line 160.
+    Found 10-bit comparator greatequal for signal <vsync$cmp_ge0000> created at line 157.
+    Found 10-bit comparator less for signal <vsync$cmp_lt0000> created at line 157.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   2 Counter(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred  17 Comparator(s).
+	inferred   8 Multiplexer(s).
+Unit <vga_affichage> synthesized.
+
+
+Synthesizing Unit <horloge_complete>.
+    Related source file is "C:/Users/Asus-Pc/Desktop/version_corrige_vhdl/horloge_complete.vhd".
+Unit <horloge_complete> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x9-bit ROM                                          : 1
+# Adders/Subtractors                                   : 8
+ 10-bit subtractor                                     : 2
+ 4-bit subtractor                                      : 2
+ 5-bit adder                                           : 1
+ 5-bit subtractor                                      : 1
+ 6-bit adder                                           : 1
+ 6-bit subtractor                                      : 1
+# Counters                                             : 4
+ 10-bit up counter                                     : 2
+ 26-bit up counter                                     : 1
+ 6-bit up counter                                      : 1
+# Registers                                            : 9
+ 1-bit register                                        : 7
+ 5-bit register                                        : 1
+ 6-bit register                                        : 1
+# Comparators                                          : 17
+ 10-bit comparator greatequal                          : 2
+ 10-bit comparator less                                : 4
+ 11-bit comparator greatequal                          : 1
+ 11-bit comparator less                                : 1
+ 12-bit comparator greatequal                          : 1
+ 12-bit comparator less                                : 1
+ 5-bit comparator greatequal                           : 2
+ 6-bit comparator greatequal                           : 5
+# Multiplexers                                         : 8
+ 1-bit 16-to-1 multiplexer                             : 8
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x9-bit ROM                                          : 1
+# Adders/Subtractors                                   : 8
+ 10-bit subtractor                                     : 2
+ 4-bit subtractor                                      : 2
+ 5-bit adder                                           : 1
+ 5-bit subtractor                                      : 1
+ 6-bit adder                                           : 1
+ 6-bit subtractor                                      : 1
+# Counters                                             : 4
+ 10-bit up counter                                     : 2
+ 26-bit up counter                                     : 1
+ 6-bit up counter                                      : 1
+# Registers                                            : 18
+ Flip-Flops                                            : 18
+# Comparators                                          : 17
+ 10-bit comparator greatequal                          : 2
+ 10-bit comparator less                                : 4
+ 11-bit comparator greatequal                          : 1
+ 11-bit comparator less                                : 1
+ 12-bit comparator greatequal                          : 1
+ 12-bit comparator less                                : 1
+ 5-bit comparator greatequal                           : 2
+ 6-bit comparator greatequal                           : 5
+# Multiplexers                                         : 8
+ 1-bit 16-to-1 multiplexer                             : 8
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <horloge_complete> ...
+
+Optimizing unit <bloc2> ...
+
+Optimizing unit <vga_affichage> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block horloge_complete, actual ratio is 17.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 70
+ Flip-Flops                                            : 70
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : horloge_complete.ngr
+Top Level Output File Name         : horloge_complete
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 18
+
+Cell Usage :
+# BELS                             : 384
+#      GND                         : 1
+#      INV                         : 8
+#      LUT1                        : 43
+#      LUT2                        : 11
+#      LUT2_L                      : 3
+#      LUT3                        : 50
+#      LUT3_L                      : 2
+#      LUT4                        : 128
+#      LUT4_D                      : 2
+#      LUT4_L                      : 4
+#      MUXCY                       : 50
+#      MUXF5                       : 30
+#      MUXF6                       : 5
+#      VCC                         : 1
+#      XORCY                       : 46
+# FlipFlops/Latches                : 70
+#      FD                          : 4
+#      FDR                         : 38
+#      FDRE                        : 28
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 17
+#      IBUF                        : 5
+#      OBUF                        : 12
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s100etq144-5 
+
+ Number of Slices:                      135  out of    960    14%  
+ Number of Slice Flip Flops:             70  out of   1920     3%  
+ Number of 4 input LUTs:                251  out of   1920    13%  
+ Number of IOs:                          18
+ Number of bonded IOBs:                  18  out of    108    16%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 50    |
+U_CLK/toggle1                      | BUFG                   | 20    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 6.180ns (Maximum Frequency: 161.814MHz)
+   Minimum input arrival time before clock: 5.613ns
+   Maximum output required time after clock: 18.504ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.607ns (frequency: 178.362MHz)
+  Total number of paths / destination ports: 1492 / 96
+-------------------------------------------------------------------------
+Delay:               5.607ns (Levels of Logic = 9)
+  Source:            U1/count_sec_5 (FF)
+  Destination:       U1/count_sec_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: U1/count_sec_5 to U1/count_sec_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.514   0.532  U1/count_sec_5 (U1/count_sec_5)
+     LUT2:I0->O            1   0.612   0.000  U1/led_reg_cmp_eq0000_wg_lut<0> (U1/led_reg_cmp_eq0000_wg_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  U1/led_reg_cmp_eq0000_wg_cy<0> (U1/led_reg_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.052   0.000  U1/led_reg_cmp_eq0000_wg_cy<1> (U1/led_reg_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  U1/led_reg_cmp_eq0000_wg_cy<2> (U1/led_reg_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  U1/led_reg_cmp_eq0000_wg_cy<3> (U1/led_reg_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  U1/led_reg_cmp_eq0000_wg_cy<4> (U1/led_reg_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  U1/led_reg_cmp_eq0000_wg_cy<5> (U1/led_reg_cmp_eq0000_wg_cy<5>)
+     MUXCY:CI->O           3   0.289   0.520  U1/led_reg_cmp_eq0000_wg_cy<6> (U1/led_reg_cmp_eq0000)
+     LUT2:I1->O           26   0.612   1.071  U1/count_sec_or00001 (U1/count_sec_or0000)
+     FDR:R                     0.795          U1/count_sec_0
+    ----------------------------------------
+    Total                      5.607ns (3.483ns logic, 2.124ns route)
+                                       (62.1% logic, 37.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U_CLK/toggle1'
+  Clock period: 6.180ns (frequency: 161.814MHz)
+  Total number of paths / destination ports: 510 / 50
+-------------------------------------------------------------------------
+Delay:               6.180ns (Levels of Logic = 3)
+  Source:            U3/h_cnt_7 (FF)
+  Destination:       U3/h_cnt_9 (FF)
+  Source Clock:      U_CLK/toggle1 rising
+  Destination Clock: U_CLK/toggle1 rising
+
+  Data Path: U3/h_cnt_7 to U3/h_cnt_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             15   0.514   1.016  U3/h_cnt_7 (U3/h_cnt_7)
+     LUT4:I0->O            2   0.612   0.383  U3/v_cnt_or0000122 (U3/N84)
+     LUT4:I3->O           12   0.612   0.886  U3/v_cnt_or00001 (U3/v_cnt_cmp_eq0000)
+     LUT2:I1->O           10   0.612   0.750  U3/h_cnt_or00001 (U3/h_cnt_or0000)
+     FDR:R                     0.795          U3/h_cnt_0
+    ----------------------------------------
+    Total                      6.180ns (3.145ns logic, 3.035ns route)
+                                       (50.9% logic, 49.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 163 / 75
+-------------------------------------------------------------------------
+Offset:              5.613ns (Levels of Logic = 5)
+  Source:            btn_min_up (PAD)
+  Destination:       U2/m_2 (FF)
+  Destination Clock: clk rising
+
+  Data Path: btn_min_up to U2/m_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   1.106   0.690  btn_min_up_IBUF (btn_min_up_IBUF)
+     LUT4:I0->O            6   0.612   0.638  U2/m_mux0002<1>11 (U2/N11)
+     LUT4_D:I1->LO         1   0.612   0.103  U2/m_mux0002<2>11 (N156)
+     LUT4:I3->O            1   0.612   0.360  U2/m_mux0002<2>26 (U2/m_mux0002<2>26)
+     LUT4:I3->O            1   0.612   0.000  U2/m_mux0002<2>60 (U2/m_mux0002<2>)
+     FDRE:D                    0.268          U2/m_2
+    ----------------------------------------
+    Total                      5.613ns (3.822ns logic, 1.791ns route)
+                                       (68.1% logic, 31.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'U_CLK/toggle1'
+  Total number of paths / destination ports: 20 / 20
+-------------------------------------------------------------------------
+Offset:              4.308ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       U3/v_cnt_9 (FF)
+  Destination Clock: U_CLK/toggle1 rising
+
+  Data Path: rst to U3/v_cnt_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            17   1.106   1.045  rst_IBUF (rst_IBUF)
+     LUT2:I0->O           10   0.612   0.750  U3/h_cnt_or00001 (U3/h_cnt_or0000)
+     FDR:R                     0.795          U3/h_cnt_0
+    ----------------------------------------
+    Total                      4.308ns (2.513ns logic, 1.795ns route)
+                                       (58.3% logic, 41.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U_CLK/toggle1'
+  Total number of paths / destination ports: 32407 / 11
+-------------------------------------------------------------------------
+Offset:              18.358ns (Levels of Logic = 14)
+  Source:            U3/h_cnt_8 (FF)
+  Destination:       vga_b<2> (PAD)
+  Source Clock:      U_CLK/toggle1 rising
+
+  Data Path: U3/h_cnt_8 to vga_b<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             16   0.514   1.031  U3/h_cnt_8 (U3/h_cnt_8)
+     LUT4:I0->O            4   0.612   0.651  U3/font_id_cmp_eq00031 (U3/font_id_cmp_eq0003)
+     LUT4:I0->O            3   0.612   0.603  U3/font_id_mux0000<1>8 (U3/N87)
+     LUT4:I0->O            1   0.612   0.509  U3/font_id_mux0000<1>118_SW0 (N105)
+     LUT3:I0->O            4   0.612   0.529  U3/font_id_mux0000<1>118 (U3/font_id_mux0000<1>118)
+     LUT3:I2->O           28   0.612   1.224  U3/font_id_mux0000<1>127 (U3/font_id_mux0000<1>)
+     LUT4:I0->O            1   0.612   0.426  U3/Mmux__mux0009<2>_10_SW0 (N97)
+     LUT3:I1->O            1   0.612   0.000  U3/Mmux__mux0009<2>_8_f5_G (N148)
+     MUXF5:I1->O           2   0.278   0.449  U3/Mmux__mux0009<2>_8_f5 (U3/Mmux__mux0009<2>_8_f5)
+     LUT4:I1->O            1   0.612   0.426  U3/vga_b<2>80 (U3/vga_b<2>80)
+     LUT4:I1->O            1   0.612   0.000  U3/vga_b<2>184_SW0_F (N151)
+     MUXF5:I0->O           1   0.278   0.509  U3/vga_b<2>184_SW0 (N89)
+     LUT4:I0->O            1   0.612   0.387  U3/vga_b<2>184 (U3/vga_b<2>184)
+     LUT4:I2->O            8   0.612   0.643  U3/vga_b<2>345 (vga_b_0_OBUF)
+     OBUF:I->O                 3.169          vga_b_2_OBUF (vga_b<2>)
+    ----------------------------------------
+    Total                     18.358ns (10.971ns logic, 7.387ns route)
+                                       (59.8% logic, 40.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 67209 / 9
+-------------------------------------------------------------------------
+Offset:              18.504ns (Levels of Logic = 15)
+  Source:            U2/m_3 (FF)
+  Destination:       vga_b<2> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: U2/m_3 to vga_b<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            25   0.514   1.223  U2/m_3 (U2/m_3)
+     LUT4:I0->O            1   0.612   0.000  U3/md_cmp_ge000411 (U3/md_cmp_ge00041)
+     MUXF5:I0->O           3   0.278   0.520  U3/md_cmp_ge00041_f5 (U3/md_cmp_ge0004)
+     LUT4:I1->O            2   0.612   0.410  U3/font_id_mux0000<2>4 (U3/N23)
+     LUT4:I2->O            1   0.612   0.509  U3/font_id_mux0000<1>118_SW0 (N105)
+     LUT3:I0->O            4   0.612   0.529  U3/font_id_mux0000<1>118 (U3/font_id_mux0000<1>118)
+     LUT3:I2->O           28   0.612   1.224  U3/font_id_mux0000<1>127 (U3/font_id_mux0000<1>)
+     LUT4:I0->O            1   0.612   0.426  U3/Mmux__mux0009<2>_10_SW0 (N97)
+     LUT3:I1->O            1   0.612   0.000  U3/Mmux__mux0009<2>_8_f5_G (N148)
+     MUXF5:I1->O           2   0.278   0.449  U3/Mmux__mux0009<2>_8_f5 (U3/Mmux__mux0009<2>_8_f5)
+     LUT4:I1->O            1   0.612   0.426  U3/vga_b<2>80 (U3/vga_b<2>80)
+     LUT4:I1->O            1   0.612   0.000  U3/vga_b<2>184_SW0_F (N151)
+     MUXF5:I0->O           1   0.278   0.509  U3/vga_b<2>184_SW0 (N89)
+     LUT4:I0->O            1   0.612   0.387  U3/vga_b<2>184 (U3/vga_b<2>184)
+     LUT4:I2->O            8   0.612   0.643  U3/vga_b<2>345 (vga_b_0_OBUF)
+     OBUF:I->O                 3.169          vga_b_2_OBUF (vga_b<2>)
+    ----------------------------------------
+    Total                     18.504ns (11.249ns logic, 7.255ns route)
+                                       (60.8% logic, 39.2% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.91 secs
+ 
+--> 
+
+Total memory usage is 4514380 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    8 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

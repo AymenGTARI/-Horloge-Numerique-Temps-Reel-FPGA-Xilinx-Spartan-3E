@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/Asus-Pc/Desktop/vhdl/versioncorrige/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/Asus-Pc/Desktop/vhdl/versioncorrige/xst"
+elaborate
+-ifn affichage_horloge.prj
+-ifmt mixed
