@@ -120,3 +120,5 @@ La détection de **front montant** (edge detection) évite les rebonds et les in
 ## 👤 Auteur
 
 Projet académique réalisé dans le cadre d'un cours de conception numérique sur FPGA.
+
+Aymen Gtari
