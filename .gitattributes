@@ -1,2 +1,3 @@
 *.vhd linguist-language=VHDL
 *.vhdl linguist-language=VHDL
+*.html linguist-vendored
